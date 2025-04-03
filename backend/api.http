@@ -1,0 +1,59 @@
+###
+POST http://localhost:8080/adminlogin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "aditigiri002@gmail.com",
+    "password": "Admin@123"
+}
+
+###
+POST http://localhost:8080/createprofile HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWNhYTVmMGYxY2VmZGFhYWFhNTMzZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzU2ODY4NCwiZXhwIjoxNzQzNTcyMjg0fQ.a2KNEXPP6e_vuTnfUjyNbUgtJQQqTSQUSP_q-xR8_dA
+
+{
+  "name": "Shubhangi giri",
+  "email": "shubhangigiri@gmail.com",
+  "contact": "9876543210",
+  "image": "profile-pic.jpg",
+  "description": "Designer",
+  "interests": ["Coding", "AI"],
+  "location": {
+    "lat": 40.7128,
+    "lng": -74.0060,
+    "address": "New Jersey, USA"
+  }
+}
+
+###
+GET http://localhost:8080/getallprofiles HTTP/1.1
+
+###
+GET http://localhost:8080/getprofile/67ecbdbdf0786a91d11757a1 HTTP/1.1
+
+
+
+###
+PUT http://localhost:8080/editprofile/67ecbb784433be13dd0bb03b HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWNhYTVmMGYxY2VmZGFhYWFhNTMzZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzU2Nzg5MywiZXhwIjoxNzQzNTcxNDkzfQ.8jogGTTJUuVqAaKtjciPGdw7THhKG7VFm6Dsq4KnRaQ
+
+{
+  "name": "John Doe Updated",
+  "email": "johndoe_updated@example.com",
+  "contact": "9876543211",
+  "image": "updated-profile-pic.jpg",
+  "description": "Senior Software Engineer",
+  "interests": ["Coding", "AI", "Machine Learning"],
+  "location": {
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "address": "San Francisco, USA"
+  }
+}
+
+###
+DELETE http://localhost:8080/deleteprofile/67ecbcd78589f14eaf0372cb HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWNhYTVmMGYxY2VmZGFhYWFhNTMzZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzU2ODA3NCwiZXhwIjoxNzQzNTcxNjc0fQ.IwDplt2SGTDHEfFu9RssrzlnM6mvIsli5C1_rKTrZW4

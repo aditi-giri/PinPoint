@@ -1,0 +1,166 @@
+/* Dashboard/style.module.css */
+
+/* Create Profile Button */
+.createButton {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  background-color: #E22030;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.createButton:hover {
+  background-color: #b81927;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal input,
+.modal textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.modal textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal button {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal button[type="submit"] {
+  background-color: #E22030;
+  color: white;
+}
+
+.modal button[type="submit"]:hover:not(:disabled) {
+  background-color: #b71a27;
+}
+
+.modal button[type="submit"]:disabled {
+  background-color: #cb3744;
+  cursor: not-allowed;
+}
+
+.modal button[type="button"] {
+  background-color: #E22030;
+  color: white;
+}
+
+.modal button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+.error {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border-left: 4px solid #ef5350;
+}
+
+/* Scrollbar Styling */
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .createButton {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal input,
+  .modal textarea,
+  .modal button {
+    padding: 10px;
+  }
+}
