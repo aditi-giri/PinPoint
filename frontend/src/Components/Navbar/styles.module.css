@@ -1,0 +1,63 @@
+.container {
+    padding: 1.2rem;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white; /* Ensures the navbar remains visible */
+    z-index: 1100; /* Ensures it stays above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 0px 3px 0px rgba(173, 173, 173, 0.5); */
+    padding-bottom: 0.5rem;
+    /* border-bottom: 1px solid silver; */
+    padding-top: 1rem;
+}
+
+.navBarOptionContainer {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.navBarOptionContainer__options{
+    display: flex ;
+    gap: 1.4rem;
+    align-items: center;
+    font-weight: 500;
+    
+}
+
+.navBarOptionContainer__option{
+   
+    padding: 0.4rem;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1.5px rgb(173, 173, 173);
+
+}
+
+.buttonJoin {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    
+    font-size: 1.4rem;
+    background: #E22030;
+    color: white;
+    padding-inline: 1.2rem;
+    padding-block: 0.6rem;
+    border-radius: 5%;
+    margin-right: 2rem;
+    
+  }
+
+  .buttonJoin:hover {
+    box-shadow: 2px 2px 3.5px rgb(173, 173, 173);
+  }
